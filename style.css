@@ -90,6 +90,8 @@
 }
 
 .trait {
+    position: relative;
+    top: -28px;
     width: 70px;
     height: 70px;
     border: 1px solid #000000;
@@ -114,4 +116,11 @@
 
 .guide-line.left {
     transform: rotate(-30deg);
+}
+
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
 }
