@@ -1,15 +1,20 @@
+:root {
+    --font: Arial, Helvetica, sans-serif;
+    --logo-size: 150px;
+}
+
 .wrapper {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
     height: 100vh;
     display: flex;
 }
 .central {
     border: 1px solid #000000;
-    height: 150px;
-    width: 150px;
+    border-radius: calc(var(--logo-size) / 2);
+    height: var(--logo-size);
+    width: var(--logo-size);
     text-align: center;
     margin: auto;
-    border-radius: 75px;
     position: relative;
     text-transform: uppercase;
 }
@@ -22,7 +27,6 @@
 }
 
 .attribute-group {
-
     display: flex;
     position: absolute;
     width: 500px;
@@ -52,5 +56,38 @@
     letter-spacing: 2px;
 }
 
+.trait-group {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    left: -75px;
+    top: -200px;
+}
 
+.trait {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(100, 100, 100);
+    line-height: 70px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 35px;
+}
 
+.guide-line {
+    height: 2px;
+    width: 100px;
+    background-color: #000000;
+    position: relative;
+    top: 30px;
+}
+
+.guide-line.right {
+    transform: rotate(30deg);
+}
+
+.guide-line.left {
+    transform: rotate(-30deg);
+}
